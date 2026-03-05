@@ -3868,14 +3868,23 @@ Maintains Primary's structure/effects while shifting color language.
   --accent-h: 334;
   --accent-s: 52%;
   --accent-l: 46%;
+  --color-accent-hsl: var(--accent-h), var(--accent-s), var(--accent-l);
   --color-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
-  --color-accent-1: hsl(334, 52%, 43%);
-  --color-accent-2: hsl(332, 56%, 37%);
-  --interactive-accent-hsl: 334, 52%, 43%;
+  --color-accent-1: hsl(
+    calc(var(--accent-h) + 0),
+    calc(var(--accent-s) * 1),
+    calc(var(--accent-l) * 0.935)
+  );
+  --color-accent-2: hsl(
+    calc(var(--accent-h) - 2),
+    calc(var(--accent-s) * 1.077),
+    calc(var(--accent-l) * 0.804)
+  );
+  --interactive-accent-hsl: var(--color-accent-hsl);
   --interactive-accent: var(--color-accent-1);
   --interactive-accent-hover: var(--color-accent-2);
-  --text-on-accent: var(--color-l-gray-10);
-  --text-on-accent-inverted: var(--color-l-gray-140);
+  --text-on-accent: hsl(0, 0%, calc((var(--accent-l) - 50%) * -1000));
+  --text-on-accent-inverted: hsl(0, 0%, calc((50% - var(--accent-l)) * -1000));
 
   --background-primary: var(--color-l-gray-20);
   --background-primary-alt: var(--color-l-gray-30);
@@ -4006,14 +4015,23 @@ Maintains Primary's structure/effects while shifting color language.
   --accent-h: 331;
   --accent-s: 62%;
   --accent-l: 66%;
+  --color-accent-hsl: var(--accent-h), var(--accent-s), var(--accent-l);
   --color-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
-  --color-accent-1: hsl(333, 43%, 52%);
-  --color-accent-2: hsl(331, 47%, 46%);
-  --interactive-accent-hsl: 333, 43%, 52%;
+  --color-accent-1: hsl(
+    calc(var(--accent-h) + 2),
+    calc(var(--accent-s) * 0.694),
+    calc(var(--accent-l) * 0.788)
+  );
+  --color-accent-2: hsl(
+    calc(var(--accent-h) + 0),
+    calc(var(--accent-s) * 0.758),
+    calc(var(--accent-l) * 0.697)
+  );
+  --interactive-accent-hsl: var(--color-accent-hsl);
   --interactive-accent: var(--color-accent-1);
   --interactive-accent-hover: var(--color-accent-2);
-  --text-on-accent: var(--color-d-gray-140);
-  --text-on-accent-inverted: var(--color-d-gray-10);
+  --text-on-accent: hsl(0, 0%, calc((var(--accent-l) - 50%) * -1000));
+  --text-on-accent-inverted: hsl(0, 0%, calc((50% - var(--accent-l)) * -1000));
 
   --background-primary: color-mix(in srgb, var(--color-d-gray-110) 78%, var(--color-d-gray-120));
   --background-primary-alt: var(--color-d-gray-120);
