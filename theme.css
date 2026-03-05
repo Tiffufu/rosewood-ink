@@ -3872,13 +3872,13 @@ Maintains Primary's structure/effects while shifting color language.
   --color-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
   --color-accent-1: hsl(
     calc(var(--accent-h) + 0),
-    calc(var(--accent-s) * 1),
-    calc(var(--accent-l) * 0.935)
+    calc(var(--accent-s) * 0.96),
+    calc(var(--accent-l) * 1.08)
   );
   --color-accent-2: hsl(
-    calc(var(--accent-h) - 2),
-    calc(var(--accent-s) * 1.077),
-    calc(var(--accent-l) * 0.804)
+    calc(var(--accent-h) - 1),
+    calc(var(--accent-s) * 1.02),
+    calc(var(--accent-l) * 0.95)
   );
   --interactive-accent-hsl: var(--color-accent-hsl);
   --interactive-accent: var(--color-accent-1);
@@ -4012,20 +4012,20 @@ Maintains Primary's structure/effects while shifting color language.
   --color-d-purple-40: hsla(275, 36%, 49%, 1);
   --color-d-alpha-purple: hsla(283, 58%, 70%, 0.22);
 
-  --accent-h: 331;
-  --accent-s: 62%;
-  --accent-l: 66%;
+  --accent-h: 334;
+  --accent-s: 47.5%;
+  --accent-l: 30%;
   --color-accent-hsl: var(--accent-h), var(--accent-s), var(--accent-l);
   --color-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
   --color-accent-1: hsl(
-    calc(var(--accent-h) + 2),
-    calc(var(--accent-s) * 0.694),
-    calc(var(--accent-l) * 0.788)
+    calc(var(--accent-h) - 1),
+    calc(var(--accent-s) * 1.01),
+    calc(var(--accent-l) * 1.075)
   );
   --color-accent-2: hsl(
-    calc(var(--accent-h) + 0),
-    calc(var(--accent-s) * 0.758),
-    calc(var(--accent-l) * 0.697)
+    calc(var(--accent-h) - 3),
+    calc(var(--accent-s) * 1.33),
+    calc(var(--accent-l) * 1.19)
   );
   --interactive-accent-hsl: var(--color-accent-hsl);
   --interactive-accent: var(--color-accent-1);
